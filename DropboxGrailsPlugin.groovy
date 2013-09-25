@@ -10,10 +10,10 @@ class DropboxGrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Dropbox Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Steve Good"
+    def authorEmail = "steve@stevegood.org"
     def description = '''\
-Brief summary/description of the plugin.
+Adds DropBox API integration to a Grails application.
 '''
 
     // URL to the plugin's documentation
@@ -22,7 +22,7 @@ Brief summary/description of the plugin.
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
 //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
@@ -31,10 +31,10 @@ Brief summary/description of the plugin.
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
 
     // Location of the plugin's issue tracker.
-//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+    def issueManagement = [ system: "GitHub", url: "https://github.com/stevegood/grails-dropbox/issues" ]
 
     // Online location of the plugin's browseable source code.
-//    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def scm = [ url: "https://github.com/stevegood/grails-dropbox" ]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before

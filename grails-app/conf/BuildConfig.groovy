@@ -37,6 +37,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         // runtime 'mysql:mysql-connector-java:5.1.24'
+        compile 'com.dropbox.core:dropbox-core-sdk:1.7.5'
     }
 
     plugins {
