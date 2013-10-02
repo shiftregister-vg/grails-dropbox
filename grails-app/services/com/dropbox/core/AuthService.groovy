@@ -10,6 +10,8 @@ class AuthService {
     // stateful properties
     private def dbConfig
     private DbxWebAuthNoRedirect _dbxWebAuthNoRedirect
+    private DbxClient _client
+    private DbxAuthFinish _authFinish
 
     String getAppKey() {
         grailsApplication.config.grails.plugin.dropbox.appKey
@@ -41,11 +43,19 @@ class AuthService {
         return webAuthNoRedirect
     }
 
+    DbxClient getClient() {
+        if (!_client) {
+            _client = new DbxClient(appInfoAndConfig.config, _authFinish)
+        }
+        return _client
+    }
+
     String getAuthUrl() {
         webAuthNoRedirect.start()
     }
 
     def finishAuth(String code) {
-        webAuthNoRedirect.finish(code)
+        _authFinish = webAuthNoRedirect.finish(code)
+        return _authFinish
     }
 }
