@@ -37,7 +37,7 @@ class DropboxService {
     }
 
     def listFoldersAndFilesInPath(String path) {
-        // TODO: list folders with their files
+        // list folders with their files
         entryService.listEntries(path)
     }
 }
